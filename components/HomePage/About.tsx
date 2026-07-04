@@ -31,16 +31,16 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="relative py-20 md:py-20 border-t border-border/50 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+      className="relative py-23 md:py-20  border-t border-border/50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       initial="hidden"
-      whileInView="visible" 
+      whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
       variants={container}
     >
-      <div className="space-y-14">
+      <div className="space-y-5 w-full">
         {/* Heading */}
         <motion.div className="space-y-3" variants={fadeUp}>
-          <h2 className="text-4xl mb-2 sm:text-5xl md:text-6xl font-bold text-foreground leading-tight tracking-tight">
+          <h2 className="text-4xl mb-0   sm:text-5xl md:text-6xl font-bold text-foreground leading-tight tracking-tight">
             About Me
           </h2>
           {/* <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent rounded-full"></div> */}
@@ -48,7 +48,7 @@ export default function About() {
 
         {/* Content */}
         <motion.div
-          className="space-y-6 text-lg  text-muted-foreground leading-relaxed max-w-3xl"
+          className="space-y-6 text-lg  text-muted-foreground leading-relaxed max-w-7xl"
           variants={fadeUp}
         >
           <p>
