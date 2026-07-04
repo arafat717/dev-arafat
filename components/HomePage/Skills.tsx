@@ -112,7 +112,7 @@ function SkillTile({ skill }: { skill: Skill }) {
 export default function Skills() {
   return (
     <div id="skills">
-      <section className="pt-20 max-w-7xl mx-auto border-border/50 dark:border-border/50 relative overflow-hidden">
+      <section className="pt-20 max-w-7xl px-6 mx-auto border-border/50 dark:border-border/50 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl dark:from-primary/5"></div>
 

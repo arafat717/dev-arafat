@@ -1,5 +1,6 @@
 import About from "@/components/HomePage/About";
 import Contact from "@/components/HomePage/Contact";
+import Education from "@/components/HomePage/Education";
 import Experience from "@/components/HomePage/Experience";
 import Hero from "@/components/HomePage/Hero";
 import Projects from "@/components/HomePage/Projects";
@@ -13,6 +14,7 @@ const page = () => {
       <Experience></Experience>
       <Projects></Projects>
       <Skills></Skills>
+      <Education />
       <Contact></Contact>
     </div>
   );
