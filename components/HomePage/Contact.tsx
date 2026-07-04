@@ -45,7 +45,11 @@ const channels = [
 
 const social = [
   { name: "GitHub", icon: Github, href: "https://github.com/arafat717" },
-  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/arafat-hossen-joni/",
+  },
 ];
 
 export default function Contact() {
