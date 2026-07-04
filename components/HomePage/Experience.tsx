@@ -31,7 +31,7 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className="py-12 border-t border-border/50 relative overflow-hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
+            className="py-20 border-t border-border/50 relative overflow-hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
         >
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl"></div>

@@ -31,7 +31,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="relative py-12 md:py-20 border-t border-border/50 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+      className="relative py-20 md:py-20 border-t border-border/50 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
       initial="hidden"
       whileInView="visible" 
       viewport={{ once: true, amount: 0.25 }}
