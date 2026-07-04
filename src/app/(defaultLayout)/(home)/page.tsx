@@ -7,7 +7,7 @@ import Skills from "@/components/HomePage/Skills";
 
 const page = () => {
   return (
-    <div className="mt-6 mx-4">
+    <div className="">
       <Hero></Hero>
       <About></About>
       <Experience></Experience>

@@ -24,7 +24,7 @@ const fadeUp: Variants = {
     y: 0,
     transition: { duration: 0.95, ease: "easeInOut" },
   },
-};  
+};
 
 const popIn: Variants = {
   hidden: { opacity: 0, y: 28, scale: 0.96 },
@@ -46,7 +46,6 @@ const skills = [
   "MongoDB",
   "Mongoose",
 ];
-const marqueeSkills = [...skills, ...skills];
 
 const socials = [
   { href: "https://github.com/arafat717", icon: FaGithub, label: "GitHub" },
@@ -67,94 +66,30 @@ export default function Hero() {
   return (
     <motion.section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-10 pb-10 px-6 overflow-hidden"
+      className="relative mt-10 md:mt-0 min-h-screen flex items-center justify-center py-16 md:py-10 px-4 sm:px-6 overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={container}
     >
-      {/* Base background */}
+      {/* Simple, calm background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/20"></div>
-
-      {/* Dot grid pattern */}
       <div
-        className="absolute inset-0 opacity-[0.015]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
           backgroundSize: "40px 40px",
         }}
       ></div>
-
-      {/* Animated mesh gradient background */}
-      <div className="absolute inset-0 -z-0">
-        <motion.div
-          className="absolute top-[-15%] left-[-10%] w-[550px] h-[550px] rounded-full bg-primary/25 blur-[100px] mix-blend-multiply dark:mix-blend-screen"
-          animate={{
-            x: [0, 80, -30, 0],
-            y: [0, 50, 90, 0],
-            scale: [1, 1.2, 0.9, 1],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-accent/25 blur-[110px] mix-blend-multiply dark:mix-blend-screen"
-          animate={{
-            x: [0, -70, 40, 0],
-            y: [0, -60, -30, 0],
-            scale: [1, 0.85, 1.15, 1],
-          }}
-          transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-[20%] right-[10%] w-[380px] h-[380px] rounded-full bg-purple-400/20 blur-[90px] mix-blend-multiply dark:mix-blend-screen"
-          animate={{
-            x: [0, 40, -60, 0],
-            y: [0, -40, 30, 0],
-            scale: [1, 1.1, 0.95, 1],
-          }}
-          transition={{ duration: 17, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-[10%] left-[15%] w-[320px] h-[320px] rounded-full bg-blue-400/20 blur-[90px] mix-blend-multiply dark:mix-blend-screen"
-          animate={{
-            x: [0, -50, 30, 0],
-            y: [0, 40, -40, 0],
-            scale: [1, 0.9, 1.1, 1],
-          }}
-          transition={{ duration: 19, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-[45%] left-[40%] w-[300px] h-[300px] rounded-full bg-pink-400/15 blur-[100px] mix-blend-multiply dark:mix-blend-screen"
-          animate={{
-            x: [0, 60, -50, 0],
-            y: [0, -50, 60, 0],
-          }}
-          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-
-      {/* Floating particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 14 }).map((_, i) => (
-          <motion.span
-            key={i}
-            className="absolute w-1.5 h-1.5 rounded-full bg-foreground/20"
-            style={{ left: `${(i * 37) % 100}%`, top: `${(i * 53) % 100}%` }}
-            animate={{ y: [0, -20, 0], opacity: [0.2, 0.6, 0.2] }}
-            transition={{
-              duration: 6 + (i % 5),
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.3,
-            }}
-          />
-        ))}
-      </div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-primary/5 blur-[100px] rounded-full"></div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Content Section */}
-          <motion.div className="space-y-8" variants={fadeUp}>
+          <motion.div
+            className="space-y-6 md:space-y-8 text-center md:text-left order-2 md:order-1"
+            variants={fadeUp}
+          >
             <motion.div className="space-y-4" variants={fadeUp}>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-muted rounded-full">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -164,21 +99,21 @@ export default function Hero() {
               </div>
 
               <motion.h1
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight"
                 variants={fadeUp}
               >
                 Arafat Hossen Joni
               </motion.h1>
 
               <motion.h3
-                className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground leading-tight tracking-tight"
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground leading-tight tracking-tight"
                 variants={fadeUp}
               >
                 Full Stack Developer
               </motion.h3>
 
               <motion.p
-                className="text-xl text-muted-foreground leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto md:mx-0"
                 variants={fadeUp}
               >
                 Transforming concepts into scalable, high-performance web
@@ -186,31 +121,25 @@ export default function Hero() {
               </motion.p>
             </motion.div>
 
-            {/* Skills marquee - right to left */}
-            <motion.div className="space-y-4" variants={fadeUp}>
-              <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                <motion.div
-                  className="flex gap-3 w-max"
-                  animate={{ x: ["0%", "-50%"] }}
-                  transition={{
-                    duration: 18,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
+            {/* Skills - simple wrapped badges */}
+            <motion.div
+              className="flex flex-wrap justify-center md:justify-start gap-3"
+              variants={fadeUp}
+            >
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 bg-muted rounded-md text-sm font-medium"
                 >
-                  {marqueeSkills.map((skill, idx) => (
-                    <span
-                      key={`${skill}-${idx}`}
-                      className="px-3 py-1 bg-muted rounded-md text-sm font-medium whitespace-nowrap"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </motion.div>
-              </div>
+                  {skill}
+                </span>
+              ))}
             </motion.div>
 
-            <motion.div className="flex flex-wrap gap-4" variants={fadeUp}>
+            <motion.div
+              className="flex flex-wrap justify-center md:justify-start gap-4"
+              variants={fadeUp}
+            >
               <motion.div
                 whileHover={{ y: -3 }}
                 transition={{ type: "spring", stiffness: 280, damping: 18 }}
@@ -240,11 +169,11 @@ export default function Hero() {
 
           {/* Profile Photo Section */}
           <motion.div
-            className="hidden md:flex justify-center items-center"
+            className="flex flex-col items-center order-1 md:order-2"
             variants={fadeUp}
           >
             <div className="relative">
-              <div className="absolute -inset-6 bg-gradient-to-tr from-primary/10 via-accent/10 to-primary/10 rounded-2xl blur-2xl"></div>
+              <div className="absolute -inset-4 md:-inset-6 bg-gradient-to-tr from-primary/10 via-accent/10 to-primary/10 rounded-2xl blur-2xl"></div>
 
               <motion.div
                 className="relative rounded-2xl overflow-hidden border-4 border-background shadow-2xl"
@@ -257,37 +186,37 @@ export default function Hero() {
                   width={1000}
                   height={1000}
                   alt="Professional headshot"
-                  className="w-[26rem] h-[26rem] xl:w-[30rem] xl:h-[30rem] object-cover"
+                  className="w-86 h-64 sm:w-80 sm:h-80 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[30rem] xl:h-[30rem] object-cover"
                   priority
                 />
               </motion.div>
 
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
-
-              {/* Social icons dock — vertical column, right of image */}
-              <motion.div
-                className="absolute top-1/2 -translate-y-1/2 -right-6 translate-x-full flex flex-col items-center gap-4 bg-background/70 backdrop-blur-md border border-border rounded-full px-3 py-5 shadow-xl"
-                variants={fadeUp}
-              >
-                {socials.map(({ href, icon: Icon, label }) => (
-                  <motion.div
-                    key={label}
-                    whileHover={{ x: 3, scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 280, damping: 18 }}
-                  >
-                    <Link
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={label}
-                      className="text-foreground/70 hover:text-foreground transition-colors"
-                    >
-                      <Icon size={22} />
-                    </Link>
-                  </motion.div>
-                ))}
-              </motion.div>
+              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-24 h-24 md:w-32 md:h-32 bg-primary/10 rounded-full blur-2xl"></div>
             </div>
+
+            {/* Social icons dock — horizontal row on mobile, vertical + offset on larger screens */}
+            <motion.div
+              className="mt-6 flex flex-row md:flex-col items-center gap-4 md:gap-4 bg-background/70 backdrop-blur-md border border-border rounded-full px-5 py-3 md:px-3 md:py-5 shadow-xl md:absolute md:top-1/2 md:-translate-y-1/2 md:-right-6 md:translate-x-full md:mt-0"
+              variants={fadeUp}
+            >
+              {socials.map(({ href, icon: Icon, label }) => (
+                <motion.div
+                  key={label}
+                  whileHover={{ y: -3, scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 280, damping: 18 }}
+                >
+                  <Link
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="text-foreground/70 hover:text-foreground transition-colors"
+                  >
+                    <Icon size={22} />
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </div>
