@@ -162,7 +162,7 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="py-24 bg-zinc-50 dark:bg-zinc-950"
+            className="py-12 bg-zinc-50 dark:bg-zinc-950"
         >
             <div className="max-w-6xl mx-auto px-6">
                 {/* Header */}

@@ -27,7 +27,7 @@ const socialLinks = [
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 border-t border-border/50 dark:border-border/30">
+        <section id="contact" className="py-12 border-t border-border/50 dark:border-border/30">
             <div className="max-w-4xl mx-auto px-6">
 
                 {/* Header */}
