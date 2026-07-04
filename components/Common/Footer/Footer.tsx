@@ -53,7 +53,7 @@ export default function Footer() {
             </p>
 
             {/* Social as icon row instead of a text list */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* <div className="flex items-center gap-3 pt-2">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -73,7 +73,7 @@ export default function Footer() {
                   </Link>
                 );
               })}
-            </div>
+            </div> */}
           </div>
 
           {/* Navigation */}

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useLayoutEffect, useState } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import Link from "next/link";
+import { useLayoutEffect, useState } from "react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,20 +19,23 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Education', href: '#education' },
-    { label: 'Contact', href: '#contact' },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Education", href: "#education" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-background/70 backdrop-blur-xl border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
-          <Link href="#home" className="text-2xl font-bold text-foreground hover:opacity-80 transition-opacity">
-            {'<Arafat />'}
+          <Link
+            href="#home"
+            className="text-2xl font-bold text-foreground hover:opacity-80 transition-opacity"
+          >
+            {"<Arafat />"}
           </Link>
 
           {/* Desktop Navigation */}
@@ -50,15 +53,11 @@ export default function Navigation() {
             {/* Theme Toggle */}
             {mounted && (
               <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="p-2 rounded-lg cursor-pointer bg-muted hover:bg-muted/80 text-foreground transition-all duration-300 ml-4"
                 aria-label="Toggle theme"
               >
-                {theme === 'dark' ? (
-                  <Sun size={20} />
-                ) : (
-                  <Moon size={20} />
-                )}
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </button>
             )}
           </div>
@@ -67,15 +66,11 @@ export default function Navigation() {
           <div className="md:hidden flex items-center gap-2">
             {mounted && (
               <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="p-2 rounded-lg bg-muted hover:bg-muted/80 text-foreground transition-all duration-300"
                 aria-label="Toggle theme"
               >
-                {theme === 'dark' ? (
-                  <Sun size={20} />
-                ) : (
-                  <Moon size={20} />
-                )}
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </button>
             )}
             <button

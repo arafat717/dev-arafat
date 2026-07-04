@@ -12,8 +12,8 @@ const page = () => {
       <Hero></Hero>
       <About></About>
       <Experience></Experience>
-      <Projects></Projects>
       <Skills></Skills>
+      <Projects></Projects>
       <Education />
       <Contact></Contact>
     </div>
