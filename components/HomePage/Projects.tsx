@@ -179,12 +179,12 @@ function ProjectCard({ project, index }: any) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-zinc-50 dark:bg-zinc-950">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="pt-20 bg-zinc-50 dark:bg-zinc-950">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="mb-14">
+        <div className="mb-14 pt-8">
           <div className="flex items-end justify-between gap-4 flex-wrap">
-            <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Featured Projects
             </h2>
             {/* <Link

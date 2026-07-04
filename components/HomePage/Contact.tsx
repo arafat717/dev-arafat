@@ -29,7 +29,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 border-t border-border/50 dark:border-border/30"
+      className="py-20  border-border/50 dark:border-border/30"
     >
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}

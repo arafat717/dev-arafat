@@ -99,7 +99,7 @@ export default function Hero() {
               </div>
 
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight"
                 variants={fadeUp}
               >
                 Arafat Hossen Joni
